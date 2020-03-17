@@ -47,10 +47,12 @@
 
             <div class="row">
 
+                <!-- Allows us to break col into thirds so leaderboard can be in same row -->
                 <div class="col-md-8">
 
                     <div class="card">
 
+                        <!-- Timer will be floated right in this card header -->
                         <h5 class="card-header">Coding Quiz! <div id="timer"></div></h5>
 
                         <div class="card-body">
@@ -61,18 +63,39 @@
                                 <p class="card-text">May God have mercy on your soul...</p>
                                 <a href="#" class="btn btn-primary" id="beginQuiz">Begin Quiz</a>
                             </div>
+
+                            <div id="question">
+                                <div id="question-title"></div>
+                            </div>
+
                         </div>
 
                     </div>
 
                 </div>
 
+                <!-- This is the body of the leaderboard -->
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                        Leaderboard
+                        </div>
+                        <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- leader end -->
             </div>
 
         </div>
 
     </div>
 
+    <!-- JS code so our time and questions will work -->
+    <script src="js/questions.js.js"></script>
     <script src="js/timer.js"></script>
 </body>
 
