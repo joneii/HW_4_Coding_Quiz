@@ -1,28 +1,30 @@
 //Variable declarations for questions
 var questions = [
     {
-      title: "Question 1:",
-      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
-      answer: "answer from choices"
+      title: "Which type of characters indicate an array type variable?",
+      choices: [".", "{}", "::", "[]"],
+      answer: "[]"
     },
     {
-      title: "Question 2:",
-      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
-      answer: "answer from choices"
+      title: "If a = true and b = false which one of the following is true?",
+      choices: ["a || b", "a && b", "a == b", "!(a || b)"],
+      answer: "a || b"
     },
     {
-      title: "Question 3:",
-      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
-      answer: "answer from choices"
+      title: "What is the less than or equal to operator?",
+      choices: ["+=", "<=", "<<", ">="],
+      answer: "<="
     },
     {
-      title: "Question 4:",
-      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
-      answer: "answer from choices"
+      title: "This value is passed back from one function to another",
+      choices: ["break", "return", "for", "function"],
+      answer: "return"
     },
     {
-      title: "Question 5:",
-      choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
-      answer: "answer from choices"
+      title: "What does NaN mean? ",
+      choices: ["Null-absolute-Numbers", "Name-and-Number", "Not-a-Number", "Null-array-Not"],
+      answer: "Not-a-Number"
     }
   ];
+
+

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz!</title>
 
-    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="css\reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -30,9 +30,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Leaderboard<span class="sr-only"></span></a>
-                </li>
+
             </ul>
         </div>
     </nav>
@@ -53,19 +51,56 @@
                     <div class="card">
 
                         <!-- Timer will be floated right in this card header -->
-                        <h5 class="card-header">Coding Quiz! <div id="timer"></div></h5>
-
+                        <h5 class="card-header">Coding Quiz! <div id="timer"></div>
+                        </h5>
+                        <!-- You are greeted with this on the home page -->
                         <div class="card-body">
-                            <div id = "instructions">
+                            <div id="instructions">
                                 <p class="card-text">Once you press start, the quiz will begin!</p>
                                 <p class="card-text">You will have 90 seconds to answer 5 questions.</p>
                                 <p class="card-text">BUT, guess WRONG and you will LOSE 15 seconds from your timer!</p>
                                 <p class="card-text">May God have mercy on your soul...</p>
                                 <a href="#" class="btn btn-primary" id="beginQuiz">Begin Quiz</a>
                             </div>
-
+                            <!-- Once begin quiz button is pressed, js will load this div -->
                             <div id="question">
-                                <div id="question-title"></div>
+                                <h3 id="question-title"></h3>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button id="choice1" type="button" class="btn btn-secondary"></button>
+                                    <button id="choice2" type="button" class="btn btn-secondary"></button>
+                                    <button id="choice3" type="button" class="btn btn-secondary"></button>
+                                    <button id="choice4" type="button" class="btn btn-secondary"></button>
+                                    
+                                </div>
+                                    <!-- Checks if your answer is right or wrong -->
+                                    <p id="checkAnswer"></p>
+                            </div>
+                            
+                            <!-- If you run out of time the js file will load this div -->
+                            <div id="TimeOut">
+                                <h3>OH NO!</h3>
+                                <p class="card-text">Looks like you ran out of time!</p>
+                                <p>Score: <div id="timeoutScore"></div></p>
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Enter your Username for Leaderboard!</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+                                    <br>
+                                    <button id="timeoutSubmit" class="btn btn-primary" type="submit">Submit</button>
+                                </div>
+                                <a href="index.html">
+                                    <h5>Try Again?</h5>
+                                </a>
+                            </div>
+                            <!-- This div  is resevered for the finishing score screen that will be loaded by js -->
+                            <div id="finish">
+                                <h3 id="endMsg"></h3>
+                                <h4 id="yourScore"></h4>
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Enter your Username for Leaderboard!</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <br>
+                                    <button id="userSubmit" class="btn btn-primary" type="submit">Submit</button>
+                                </div>
                             </div>
 
                         </div>
@@ -75,16 +110,14 @@
                 </div>
 
                 <!-- This is the body of the leaderboard -->
-                <div class="col-md-4">
+                <div id="leaderboard" class="col-md-4">
                     <div class="card" style="width: 18rem;">
-                        <div class="card-header">
-                        Leaderboard
-                        </div>
-                        <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                        </ul>
+                        <h5 class="card-header">
+                           Leaderboard 
+                        </h5>
+                        <ol class="list-group list-group-flush" id = "scoreList">
+                            <!-- <li class="list-group-item"></li> -->
+                        </ol>
                     </div>
                 </div>
                 <!-- leader end -->
@@ -95,7 +128,7 @@
     </div>
 
     <!-- JS code so our time and questions will work -->
-    <script src="js/questions.js.js"></script>
+    <script src="js/questions.js"></script>
     <script src="js/timer.js"></script>
 </body>
 

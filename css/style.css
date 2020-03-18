@@ -1,3 +1,9 @@
+body{
+
+    background-color: rgb(209, 209, 209);
+
+}
+
 .wrapper {
 
     margin-top: 50px;
@@ -11,9 +17,34 @@
 
 }
 
-.card-body {
 
+#userSubmit, #beginQuiz {
 
+    float: right
 
 }
 
+#TimeOut  {
+
+    position: relative;
+    text-align: center;
+}
+
+#TimeOut a {
+
+    color: rgb(22, 1, 143);
+    display: inline-block;
+
+}
+
+#leaderboard h5 {
+
+text-align: center;
+
+}
+
+#leaderboard {
+
+   
+
+}
